@@ -12,11 +12,21 @@
             <ColumnDefinition Width="254"/>
         </Grid.ColumnDefinitions>
         <Canvas x:Name="DrawingCanvas" Margin="10" Background="White"/>
+
+        <!-- Кнопка для выбора и загрузки многоугольников -->
         <Button Content="Выбор фигуры" Margin="0,18,10,0" VerticalAlignment="Top" Click="LineScanAlgorithm" Grid.Column="1" HorizontalAlignment="Right" Width="234" Height="20" Background="White" BorderBrush="#FF00DCDC"/>
+
+        <!-- Кнопка для заливки многоугольников цветом -->
         <Button x:Name="FillButton" Content="Заливка" Grid.Column="1" Margin="0,43,10,0" VerticalAlignment="Top" Click="FillButton_Click" HorizontalAlignment="Right" Width="234" Height="20" BorderBrush="#FF00DCDC" Background="White"/>
+
+        <!-- Текстовые блоки для отображения статуса Z-буфера и активных рёбер -->
         <TextBlock x:Name="ZBufferStatus" VerticalAlignment="Top" Margin="10,126,10,0" TextWrapping="Wrap" Grid.Column="1" Height="18" Text=""/>
         <TextBlock x:Name="ActiveEdgesStatus" VerticalAlignment="Top" Margin="10,149,10,0" TextWrapping="Wrap" Grid.Column="1" Text="" Height="16"/>
-        <Button x:Name="StepButton" Content="Нарисовать линию" Grid.Column="1" HorizontalAlignment="Right" Margin="0,68,10,0" VerticalAlignment="Top" Width="234" Click="StepButton_Click" Height="20" BorderBrush="#FF00DCDC" Background="White"/>
+
+        <!-- Кнопка для отображения границ многоугольников (если хотите оставить) -->
+        <Button x:Name="StepButton" Content="Нарисовать линию" Grid.Column="1" HorizontalAlignment="Right" Margin="0,68,10,0" VerticalAlignment="Top" Width="234"  Height="20" BorderBrush="#FF00DCDC" Background="White"/>
+
+        <!-- Кнопка для очистки канваса и Z-буфера -->
         <Button x:Name="ClearButton" Content="Очистить поле" Grid.Column="1" HorizontalAlignment="Right" Margin="0,93,10,0" VerticalAlignment="Top" Width="234" Click="ClearButton_Click" Height="20" BorderBrush="#FF00DCDC" Background="White"/>
     </Grid>
 </Window>
